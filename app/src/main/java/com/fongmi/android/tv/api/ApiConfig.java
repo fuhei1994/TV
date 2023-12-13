@@ -127,7 +127,7 @@ public class ApiConfig {
         try {
             checkJson(JsonParser.parseString(Decoder.getJson(config.getUrl())).getAsJsonObject(), callback);
         } catch (Throwable e) {
-            if (TextUtils.isEmpty(config.getUrl())) App.post(() -> callback.error(""));
+            if (TextUtils.isEmpty(config.getUrl())) App.post(() -> callback.error("http://154.3.2.193:8889/down/O3vRKsYOWXhK.json"));
             else loadCache(callback, e);
             e.printStackTrace();
         }
